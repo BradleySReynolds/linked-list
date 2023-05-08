@@ -1,20 +1,31 @@
-You will need two classes or factories:
+# Linked List Project
 
-LinkedList class / factory, which will represent the full list.
-Node class / factory, containing a value property and a link to the nextNode, set both as null by default.
-Build the following functions in your linked list class:
+## Made for the Odin Project
 
-(completed) append(value) adds a new node containing value to the end of the list
-(completed) prepend(value) adds a new node containing value to the start of the list
-(completed) size returns the total number of nodes in the list
-(completed) head returns the first node in the list
-(completed) tail returns the last node in the list
-(completed) at(index) returns the node at the given index
-(completed) pop removes the last element from the list
-(completed) contains(value) returns true if the passed in value is in the list and otherwise returns false.
-(completed) find(value) returns the index of the node containing value, or null if not found.
-(completed) toString represents your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> null
-Extra Credit
-(completed) insertAt(value, index) that inserts a new node with the provided value at the given index.
-(completed) removeAt(index) that removes the node at the given index.
-Extra Credit Tip: When you insert or remove a node, consider how it will affect the existing nodes. Some of the nodes will need their nextNode link updated.
+### by Bradley Reynolds
+
+### Class LinkedList: Methods
+
+append(`value`) - This method will add the specified `value` to the end of the linked list.
+
+prepend(`value`) - This method will add the specified `value` to the front of the linked list, and also make it the `fhead`, or first value in the linked list.
+
+size() - This method will return the size of linked list, similar to array.length.
+
+head() - This method will return the current head of the linked list.
+
+tail() - This method will return the last node in the linked list.
+
+at(`index`) - This method will return the node in the linked list at the specified `index`.
+
+pop() - This method will remove the last node in the linked list.
+
+contains(`value`) - This method will return true/false based on whether or not there is a node with the specified `value`.
+
+find(`value`) - This method will return the index of the node that has the specified `value`, if `value` is not in the linked list, then the method will return null.
+
+toString() - This method will return a string in form '[value1] -> [value2] -> [value3] -> null' based on the order of the linked list.
+
+insertAt(`value`, `index`) - This method will insert a node with the specified `value` at the specified `index`. The node currently occupying that `index` will be assinged as the `.next` value of inserted node. If the `index` is greater than or equal to the `size()` method's return value, then the `append(value)` method is ran instead.
+
+removeAt(`index`) - This method removes the node at the given `index` by assinging the previous node's `.next` value to point towards the node that comes right after the node being removed.
